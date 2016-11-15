@@ -4,8 +4,8 @@ export const views: Object[] = [
     link: ['']
   },
   {
-    name: 'Lazy',
-    link: ['lazy']
+    name: 'Deep-Lazy',
+    link: ['lazy', 'deep-lazy']
   },
     {
     name: 'Sync',

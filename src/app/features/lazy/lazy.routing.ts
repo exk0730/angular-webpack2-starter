@@ -6,5 +6,9 @@ export const routes: Routes = [
   {
     path: '',
     component: LazyComponent
+  },
+  {
+    path: 'deep-lazy',
+    loadChildren: './deep-lazy/index#DeepLazyModule'
   }
 ];

@@ -41,3 +41,11 @@ export function rootReducer(state: any, action: any) {
     return developmentReducer(state, action);
   }
 }
+
+export function createReducer(asyncReducers = {}) {
+  if (ENV !== 'development') {
+    return combineReducers(Object.assign(reducers, asyncReducers));
+  } else {
+    return compose(...DEV_REDUCERS, combineReducers)(Object.assign(reducers, asyncReducers));
+  }
+}
